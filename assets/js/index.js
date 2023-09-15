@@ -15,8 +15,12 @@ async function getProducts(){
 
 
 async function main(){
-    const products = JSON.parse(window.localStorage.getItem("products")) || await getProducts();
-    console.log(products);
+    const db = {
+        products: JSON.parse(window.localStorage.getItem("products")) || await getProducts(),
+        cart: {},
+    }
+    console.log(db.products);
+
 }
 
 
