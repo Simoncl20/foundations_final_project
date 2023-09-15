@@ -14,12 +14,31 @@ async function getProducts(){
 }
 
 
+function printProducts(db){
+    const $products = document.querySelector(".products");
+
+    let html = "";
+
+    for (const product of db.products) {
+        html += `
+            <div class="product">
+                <p>${product.name}</p>
+            </div>
+        `;
+    }
+
+    $products.innerHTML = html;
+
+}
+
+
 async function main(){
     const db = {
         products: JSON.parse(window.localStorage.getItem("products")) || await getProducts(),
         cart: {},
     }
-    console.log(db.products);
+    
+    printProducts(db);
 
 }
 
