@@ -98,13 +98,13 @@ img{
 }
 
 .cart_products{
-    background-color: blue;
+    background-color: #faa9a9;
     height: 85%;
     width: 100%;
 }
 
 .cart_total{
-    background-color: brown;
+    background-color: rgb(43, 43, 43);
     height: 15%;
     width: 100%;
 }
