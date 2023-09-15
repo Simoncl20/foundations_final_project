@@ -26,12 +26,12 @@ function printProducts(db) {
                     <img src="${product.image}" alt="imagen">
                 </div>
 
-                <div className="product_info">
-                    <h3>${product.name} <span> <b>Stock</b>: ${product.quantity} </span></h3>
-                    <h4>
+                <div class="product_info">
+                    <h4>${product.name} | <span> <b>Stock</b>: ${product.quantity} </span></h4>
+                    <h5>
                         $${product.price}
                         <i class="bx bx-plus" id='${product.id}'></i>
-                    </h4>
+                    </h5>
                 </div>
                 
             </div>
