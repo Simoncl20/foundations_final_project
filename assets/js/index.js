@@ -63,7 +63,24 @@ async function main() {
     handleShowCart();
 
     const $products = document.querySelector(".products");
-    
+
+    $products.addEventListener("click", (e) => {
+        if (e.target.classList.contains("bx-plus")) {
+            
+            const id = Number(e.target.id);
+
+            const productFind = db.products.find((product) => product.id === id);
+            
+            if (db.cart[productFind.id]) {
+                db.cart[productFind.id].amount ++;
+            }else{
+                db.cart[productFind.id] = {...productFind, amount: 1};
+            }
+            
+            console.log(db.cart);
+        };
+    });
+
 }
 
 main();
