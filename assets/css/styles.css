@@ -92,9 +92,14 @@ img{
     background-color: white; 
     position: fixed;
     top: var(--h-header);
-    right: 0;
+    right: -100%;
     display: flex;
     flex-direction: column;
+    transition: right 0.5s;
+}
+
+.cart_show{
+    right: 0;
 }
 
 .cart_products{
@@ -108,3 +113,4 @@ img{
     height: 15%;
     width: 100%;
 }
+

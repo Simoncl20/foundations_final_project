@@ -41,6 +41,16 @@ function printProducts(db) {
     $products.innerHTML = html;
 }
 
+function handleShowCart() {
+    const $iconCart = document.querySelector(".bx-cart");
+    const $cart = document.querySelector(".cart");
+
+    $iconCart.addEventListener("click", () => {
+        $cart.classList.toggle("cart_show");
+    })
+
+}
+
 async function main() {
     const db = {
         products:
@@ -50,6 +60,10 @@ async function main() {
     };
 
     printProducts(db);
+    handleShowCart();
+
+    const $products = document.querySelector(".products");
+    
 }
 
 main();
